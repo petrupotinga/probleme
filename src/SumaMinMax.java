@@ -6,14 +6,13 @@ public class SumaMinMax {
         int[] array2 = {5};
         int[] array3 = {6, 2, 1, 8, 10};
         int[] array4 = {1, 1, 11, 2, 3};
-        SumaMinMax sumaMinMax = new SumaMinMax();
-        System.out.println(sumaMinMax.sumaArray(array1));
-        System.out.println(sumaMinMax.sumaArray(array2));
-        System.out.println(sumaMinMax.sumaArray(array3));
-        System.out.println(sumaMinMax.sumaArray(array4));
+        System.out.println(sumaArray(array1));
+        System.out.println(sumaArray(array2));
+        System.out.println(sumaArray(array3));
+        System.out.println(sumaArray(array4));
     }
 
-    public int sumaArray(int[] array) {
+    public static int sumaArray(int[] array) {
         if (array == null || array.length < 3) {
             return 0;
         }
