@@ -5,9 +5,16 @@ public class CifraControl {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Introduceți un număr: ");
         int n = scanner.nextInt();
-        int cifraDeControl = calculCifraDeControl(n);
-        System.out.println("Cifra de control a numărului " + n + " este: " + cifraDeControl);
+        if (n <= 0) {
+            System.out.println("Numărul introdus trebuie să fie un număr pozitiv.");
+        } else {
+            int cifraDeControl = calculCifraDeControl(n);
+            System.out.println("Cifra de control a numărului " + n + " este: " + cifraDeControl);
+        }
+
+        scanner.close();
     }
+
 
     public static int calculCifraDeControl(int n) {
         while (n >= 10) {
