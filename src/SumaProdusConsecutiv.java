@@ -1,8 +1,17 @@
+import java.util.Scanner;
+
 public class SumaProdusConsecutiv {
     public static void main(String[] args) {
-        int n = 5;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Introduceti un numar intreg pozitiv: ");
+        int n = scanner.nextInt();
+        if (n <= 0) {
+            System.out.println("Numarul introdus trebuie sa fie un numar intreg pozitiv.");
+            return;
+        }
         long result = SumProdRec(n);
         System.out.println("Suma produselor este: " + result);
+        scanner.close();
     }
 
     public static long SumProdRec(int n) {
