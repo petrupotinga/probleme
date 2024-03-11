@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ListIterator;
 import java.util.Scanner;
 
 public class VerificaPolindrom {
@@ -16,16 +13,14 @@ public class VerificaPolindrom {
     }
 
     public static boolean estePalindrom(String str) {
-        List<Character> caractere = new ArrayList<>();
-        for (char ch : str.toCharArray()) {
-            caractere.add(ch);
-        }
-        ListIterator<Character> iteratorInainte = caractere.listIterator();
-        ListIterator<Character> iteratorInapoi = caractere.listIterator(caractere.size());
-        while (iteratorInainte.hasNext() && iteratorInapoi.hasPrevious()) {
-            if (iteratorInainte.next() != iteratorInapoi.previous()) {
+        int i = 0;
+        int j = str.length() - 1;
+        while (i < j) {
+            if (str.charAt(i) != str.charAt(j)) {
                 return false;
             }
+            i++;
+            j--;
         }
         return true;
     }
