@@ -1,15 +1,18 @@
 public class SumaCifrelorDivizibilaCu3 {
+
     public static void main(String[] args) {
         int[] sir = {123, 124, 242, 351};
-        System.out.println("Elementele sirului pentru care suma cifrelor este divizibila cu 3:");
+        int divizor = 2;
+        System.out.println("Elementele sirului pentru care suma cifrelor este divizibila cu " + divizor + ":");
         for (int numar : sir) {
-            if (sumaDivizibilaCu3(numar)) {
+            if (sumaDivizibilaCu(numar, divizor)) {
                 System.out.println(numar);
             }
         }
     }
 
     public static int sumaCifrelor(int numar) {
+        numar = Math.abs(numar); // Asigurăm că lucrăm cu valoarea absolută a numărului
         int suma = 0;
         while (numar != 0) {
             suma += numar % 10;
@@ -18,8 +21,9 @@ public class SumaCifrelorDivizibilaCu3 {
         return suma;
     }
 
-    public static boolean sumaDivizibilaCu3(int numar) {
-        return sumaCifrelor(numar) % 3 == 0;
+    public static boolean sumaDivizibilaCu(int numar, int divizor) {
+        return sumaCifrelor(numar) % divizor == 0;
     }
 }
+
 
