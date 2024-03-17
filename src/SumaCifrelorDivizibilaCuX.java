@@ -1,4 +1,4 @@
-public class SumaCifrelorDivizibilaCu3 {
+public class SumaCifrelorDivizibilaCuX {
 
     public static void main(String[] args) {
         int[] sir = {123, 124, 242, 351};
