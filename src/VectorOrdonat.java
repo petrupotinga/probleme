@@ -1,9 +1,17 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class VectorOrdonat {
     public static void main(String[] args) {
-        int[] vector = {13, 1, 10, 15, 3, 7, 11, 17, 19};
-        int k = 3;
+        Scanner scanner = new Scanner(System.in);
+        int n = 7;
+        int[] vector = new int[n];
+        System.out.println("Introdu " + n + " elementele ale sirului:");
+        for (int i = 0; i < n; i++) {
+            vector[i] = scanner.nextInt();
+        }
+
+        int k = 3; // Aici poți specifica valoarea lui k sau poți să-l citești și pe el de la consolă
         ordoneazaVector(vector, k);
         System.out.println("Vectorul ordonat: " + Arrays.toString(vector));
     }
